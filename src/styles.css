@@ -114,11 +114,6 @@ p.min-max-temp {
 }
 
 .source_code {
-    font-size: 10px;
-    font-family: 'Courier New', Courier, monospace;
-}
-
-.source_code {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: blue;
     font-size: 12px;
