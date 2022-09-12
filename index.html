@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="main-container container">
+<h4 class="heading">
+  Local Weather Forecast
+</h4>
+<br />
+      <form id="search-form">
+        <row>
+  <div class="input-group mb-3">
+  <div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="Enter City" aria-describedby="button-addon2" id="search-input">
+      <button class="btn" type="submit" id="button-addon2">Search</button>
+      
+    </div>
+  </div>  
+  <button class="btncurrent" type="button" id="btn_current">Current Location</button>
+        </row>
+        <p></p>
+
+      </form>
+      <div class="row">
+          <div class="col">
+              <h2 class="heading">Utrecht</h2>
+          </div>
+      </div>
+        <div class="row">
+          <div class="col-6">
+            <p class="mid-paragraph" id="date">Tuesday, 15:55</p>
+            <p class="mid-paragraph" id="weather_description">Cloudy with chance of rain</p>
+            <p class="mid-paragraph" id="wind_label">Wind: 18km/h</p>
+            <strong>
+            <span class="day-time" id="dayTime">
+              12°
+            </span>
+            <span class="units">
+              <a href="#" id="celsius-link">°C</a> |
+              <a href="#" id="fahrenheit-link">°F</a>
+            </span>
+            
+          </strong>
+          <p class="mid-paragraph min-max-temp">29°/11°
+            </p>
+          </div>
+          <h4 class="precipitation">
+          <div class="col-6">
+            <div class="row" id="precip">Precipitation:50%</div>
+          </div>
+          <br />
+          <img src="images/cloudysunny.png" alt="cloudysunny" class="img-today-temp">
+        </div>
+      </h4>
+      <hr />
+          <div class="row">
+            <div class="col margin-temperature">
+              <div class="row">Wed </div>
+              <div class="row date">01/06 </div>
+              <div class="row"><img src="images/sun.png" alt="cloudy" class="daily-images"/></div>
+              <div class="row">30°</div>
+              <div class="row min">12°</div>
+            </div>
+            <div class="col">
+                <div class="row">Thu </div>
+                <div class="row date">02/06 </div>
+                <div class="row"><img src="images/rain.png" alt="cloudy" class="daily-images"/></div>
+                <div class="row">29°</div>
+                <div class="row min">12°</div>
+            </div>
+            <div class="col">
+                <div class="row">Fri </div>
+                <div class="row date">03/06 </div>
+                <div class="row"><img src="images/lightning.png" alt="cloudy" class="daily-images"/></div>
+                <div class="row">26°</div>
+                <div class="row min">12°</div>
+            </div>
+            <div class="col">
+                <div class="row">Sat </div>
+                <div class="row date">04/06 </div>
+                <div class="row"><img src="images/sun.png" alt="cloudy" class="daily-images"/></div>
+                <div class="row">29°</div>
+                <div class="row min">12°</div>
+            </div>
+            <div class="col">
+                <div class="row">Sun </div>
+                <div class="row date">05/06 </div>
+                <div class="row"><img src="images/sun.png" alt="cloudy" class="daily-images"/></div>
+                <div class="row">31°</div>
+                <div class="row min">12°</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="http://coruscating-kulfi-ee4a33.netlify.app" class="source_code">Open-source code</a>
+    <p class="footer">Coded by Maronel Lotter</p>
+    <script src="src/index.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

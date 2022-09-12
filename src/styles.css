@@ -1,0 +1,125 @@
+body {
+    min-height: 100%;
+    background: radial-gradient(circle at 10% 20%,
+            rgb(149, 219, 254) 0%,
+            rgb(7, 134, 197) 90.1%);
+    min-height: 100%;
+}
+
+h4.heading {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(68, 67, 67);
+    font-size: 17px;
+}
+
+.main-container {
+    border: solid 1px;
+    border-color: grey;
+    border-radius: 6px;
+    max-width: 540px;
+    padding: 30px;
+    margin: block;
+}
+
+img.daily-images {
+    width: 30px;
+}
+
+h3.temperature {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+
+h4.precipitation {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+.day-time {
+    font-size: 50px;
+}
+
+.mid-paragraph {
+    display: block;
+    margin: 0 auto;
+}
+
+h2.heading {
+    font-size: 32px;
+}
+
+.min {
+    font-size: 13px;
+}
+
+.margin-temperature {
+    padding: block;
+    margin-left: 40px;
+}
+
+.date {
+    font-size: 13px;
+}
+
+.footer {
+    font-family: "Courier New", Courier, monospace;
+    text-align: center;
+    color: black;
+    font-size: 14px;
+}
+
+p {
+    font-size: 12px;
+}
+
+p.min-max-temp {
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.units {
+    font-size: 14px;
+    text-decoration: underline 2px blue;
+}
+
+.btn {
+    color: white;
+    background-color: #343a40;
+}
+
+.btn:hover {
+    background-color: white;
+    color: #343a40;
+}
+
+.img-today-temp {
+    width: 120px;
+}
+
+.btncurrent {
+    background-color: #95b8d0;
+    color: white;
+    font-size: 14px;
+    border-radius: 5px;
+    border-color: #95b8d0;
+    padding: 6px;
+    margin: block;
+}
+
+.btncurrent:hover {
+    background-color: white;
+    color: grey;
+    border-radius: 5px;
+    border-color: white;
+}
+
+.source_code {
+    font-size: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.source_code {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: blue;
+    font-size: 12px;
+}
