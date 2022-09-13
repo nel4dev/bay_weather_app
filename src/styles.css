@@ -37,6 +37,7 @@ h4.precipitation {
 
 .day-time {
     font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .mid-paragraph {
@@ -46,6 +47,7 @@ h4.precipitation {
 
 h2.heading {
     font-size: 32px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .min {
@@ -78,8 +80,10 @@ p.min-max-temp {
 }
 
 .units {
-    font-size: 14px;
-    text-decoration: underline 2px blue;
+    font-size: 16px;
+    text-decoration: black;
+    position: relative;
+    top: -22px;
 }
 
 .btn {

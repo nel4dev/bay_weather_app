@@ -15,6 +15,7 @@ let todaysDate = document.querySelector("#date");
 
 todaysDate.innerHTML = `${month}`;
 
+
 function searchCity(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#search-input");
@@ -59,6 +60,8 @@ function showWeather(response) {
   precipitation.innerHTML = `Humidity:${response.data.main.humidity}%`;
   let description = document.querySelector("#weather_description");
   description.innerHTML = response.data.weather[0].description;
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
 
 function retrievePosition(position) {
