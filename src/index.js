@@ -9,6 +9,9 @@ let options = {
   minute: "2-digit"
 };
 
+let celciusTemperature = null;
+
+
 let month = now.toLocaleTimeString("en-us", options);
 
 let todaysDate = document.querySelector("#date");
@@ -38,19 +41,22 @@ function currentLocation(event) {
 
 function changeFahrenheit(event) {
   event.preventDefault();
-  let celciusInput = document.querySelector("#dayTime");
-  celciusInput.innerHTML = "66°";
+  let temperatureElement = document.querySelector("#dayTime");
+  let fahrenheitTemperature = (celciusTemperature * 9) /5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
 function changeCelcius(event) {
   event.preventDefault();
-  let celciusInput = document.querySelector("#dayTime");
-  celciusInput.innerHTML = "15°";
+  let temperatureElement = document.querySelector("#dayTime");
+  temperatureElement.innerHTML = Math.round(celciusTemperature);
 }
 
 function showWeather(response) {
+  celciusTemperature = response.data.main.temp;
+
   let h1 = document.querySelector("h2");
-  let temperature = Math.round(response.data.main.temp);
+  let temperature = Math.round(celciusTemperature);
   let celciusInput = document.querySelector("#dayTime");
   celciusInput.innerHTML = temperature + "°";
   let windSpeed = document.querySelector("#wind_label");
@@ -62,6 +68,7 @@ function showWeather(response) {
   description.innerHTML = response.data.weather[0].description;
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 function retrievePosition(position) {
@@ -72,8 +79,9 @@ function retrievePosition(position) {
   axios.get(url).then(showWeather);
 }
 
-let celciusVar = document.querySelector("#celsius-link");
-celciusVar.addEventListener("click", changeCelcius);
+let celsius = document.querySelector("#celsius-link");
+celsius.addEventListener("click", changeCelcius);
 
 let fahrenheit = document.querySelector("#fahrenheit-link");
 fahrenheit.addEventListener("click", changeFahrenheit);
+
