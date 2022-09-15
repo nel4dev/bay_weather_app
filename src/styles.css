@@ -68,6 +68,7 @@ h2.heading {
     text-align: center;
     color: black;
     font-size: 14px;
+    
 }
 
 p {
@@ -122,6 +123,7 @@ p.min-max-temp {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: blue;
     font-size: 12px;
+    
 }
 
 .weather-forecast {
@@ -133,6 +135,7 @@ p.min-max-temp {
 .weather-forecast-date {
     font-size: 16px;
     opacity: 0.5;
+   
 }
 
 .weather-forecast-temperature-min {
