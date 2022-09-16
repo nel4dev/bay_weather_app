@@ -6,16 +6,13 @@ function formatDay(timestamp) {
   return days[day];
 }
 
-let celciusTemperature = null;
-
-let API_KEY = "5f472b7acba333cd8a035ea85a0d4d4c";
+let API_KEY = "ce144f0cf51fa43f03431f0488a36728";
 
 function displayForecast(response) {
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
   
-  
-  
+
   let forecastHTML = `<div class="row">`;
   forecast.forEach(function (forecastDay, index) {
     if (index < 6){
@@ -66,19 +63,6 @@ function currentLocation(event) {
   navigator.geolocation.getCurrentPosition(retrievePosition);
 }
 
-function changeFahrenheit(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#dayTime");
-  let fahrenheitTemperature = (celciusTemperature * 9) /5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-}
-
-function changeCelcius(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#dayTime");
-  temperatureElement.innerHTML = Math.round(celciusTemperature);
-}
-
 function getForecast(coordinates) {
   console.log(coordinates);
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${API_KEY}&units=metric`;
@@ -107,19 +91,11 @@ function showWeather(response) {
   getForecast(response.data.coord);
 }
 
-
-
 function retrievePosition(position) {
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
   let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${API_KEY}`;
   axios.get(url).then(showWeather);
 }
-
-let celsius = document.querySelector("#celsius-link");
-celsius.addEventListener("click", changeCelcius);
-
-let fahrenheit = document.querySelector("#fahrenheit-link");
-fahrenheit.addEventListener("click", changeFahrenheit);
 
 search("Houten");
