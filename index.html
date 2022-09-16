@@ -17,60 +17,58 @@
   </head>
   <body>
     <div class="main-container container">
-<h4 class="heading">
-  Local Weather Forecast
-</h4>
-<br />
-      <form id="search-form">
-        <row>
-  <div class="input-group mb-3">
-  <div class="input-group mb-3">
-      <input type="text" class="form-control" placeholder="Enter City" aria-describedby="button-addon2" id="search-input">
-      <button class="btn" type="submit" id="button-addon2">Search</button>
+      <h4 class="heading">
+        Local Weather Forecast</h4>
+          <br />
+            <form id="search-form">
+             <row>
+              <div class="input-group mb-3">
+                <div class="input-group mb-3">
+                 <input type="text" class="form-control" placeholder="Enter City" aria-describedby="button-addon2" id="search-input">
+                   <button class="btn" type="submit" id="button-addon2">Search</button>
       
     </div>
-  </div>  
-  <button class="btncurrent" type="button" id="btn_current">Current Location</button>
-        </row>
-        <p></p>
+              </div>  
+                <button class="btncurrent" type="button" id="btn_current">Current Location</button>
+                </row>
+                <p></p>
 
-      </form>
-      <div class="row">
-          <div class="col">
-              <h2 class="heading">Utrecht</h2>
-          </div>
-      </div>
-        <div class="row">
-          <div class="col-6">
-            <p class="mid-paragraph" id="date">Tuesday, 15:55</p>
-            <p class="mid-paragraph" id="weather_description">Cloudy with chance of rain</p>
-            <p class="mid-paragraph" id="wind_label">Wind: 18km/h</p>
-            <strong>
-            <span class="day-time" id="dayTime">
-            </span>
+                  </form>
+                   <div class="row">
+                    <div class="col">
+                      <h2 class="heading">Utrecht</h2>
+                  </div>
+                    </div>
+                  <div class="row">
+                  <div class="col-6">
+                  <p class="mid-paragraph" id="date">Tuesday, 15:55</p>
+                  <p class="mid-paragraph" id="weather_description">Cloudy with chance of rain</p>
+                  <p class="mid-paragraph" id="wind_label">Wind: 18km/h</p>
+                   <strong>
+                    <span class="day-time" id="dayTime">
+                    </span>
+                      <small>
+                        <span class="units"></span>
+                          </small>
+                  </strong>
+                   </div>
+              <h4 class="precipitation">
+              <div class="col-6">
+             <div class="row" id="precip">Precipitation:50%</div>
+                  </div>
+                <br />
+                 <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="cloudysunny" class="img-today-temp" id="icon"/>
+              </div>
+          </h4>
+            <hr />
+              <div class="weather-forecast" id="forecast">
+               </div>
+                </div> 
+            <div class="footer"> 
             <small>
-            <span class="units"></span>
-            </small>
-            </strong>
-          </div>
-          <h4 class="precipitation">
-          <div class="col-6">
-            <div class="row" id="precip">Precipitation:50%</div>
-          </div>
-          <br />
-          <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="cloudysunny" class="img-today-temp" id="icon"/>
-        </div>
-      </h4>
-      <hr />
-      <div class="weather-forecast" id="forecast">
-       </div>
-    </div> 
-  <div class="footer"> 
-    <small>
-  <a href="https://github.com/nel4dev/bay_weather_app" class="source_code" target="_blank">Open-source code</a> by Maronel Lotter
-      </small>
-  </div> 
-    <script src="src/index.js"></script>
-   
-  </body>
+              <a href="https://github.com/nel4dev/bay_weather_app" class="source_code" target="_blank">Open-source code</a> by Maronel Lotter
+                </small>
+            </div> 
+        <script src="src/index.js"></script>
+    </body>
 </html>
